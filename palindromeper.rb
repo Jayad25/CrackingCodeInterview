@@ -1,5 +1,5 @@
 def permutation(string)
-    array = string.split("").permutation.to_a
+   array = string.split("").permutation.to_a
 end
 
 
@@ -10,11 +10,11 @@ end
 
 def palindromeper(string)
     result = []
-    permutations = permutation(string)
+    permutations = permutation(string.split(" ").join("").downcase())
     permutations.each do |array|
         word = array.join("")
         result.push(word) if palindrome(word) and !result.include?(word)
     end
     result
 end
-p palindromeper("madam")
+p palindromeper("Tact Coa")
