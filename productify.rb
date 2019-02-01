@@ -14,4 +14,4 @@ def productify(arr)
     result
 end
 
-p productify([1,2,3])
+p productify([2,3,4])
