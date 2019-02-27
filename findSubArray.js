@@ -18,5 +18,5 @@ function subArray1(array){
     }
     return subArrays.sort(function (a, b) { return a.length - b.length })
 }
-console.log(findSubArray([1, 2, 3, 4],5));
-console.log(subArray1([1, 2, 3, 4]));
+console.log(findSubArray([1, 2, 3, 4],20));
+// console.log(subArray1([1, 2, 3, 4]));
