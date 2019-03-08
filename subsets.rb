@@ -13,4 +13,10 @@ def subsets(array)
     end
     count
 end
-p checksum([2,4,6,10],20)
+p subsets([2,4,6,10])
+x = subsets([2,4,6,10])
+result = []
+x.each do |y|
+    result.push(y) if y.length == 2
+end
+ result
