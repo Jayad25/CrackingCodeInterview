@@ -1,13 +1,17 @@
+var search = function (nums, target) {
+    let pivotIndex = pivot(0, nums.length, nums)
+    // console.log(pivotIndex)
+    if (nums[pivotIndex] <= target && nums[nums.length - 1] >= target) {
+        // console.log(nums.splice(pivotIndex))
 
-function search(nums,target){
-let pivotIndex = pivot(0,nums.length,nums)
-    if(nums[pivotIndex]<target && nums[nums.length - 1] > target){
-        return pivotIndex+ bSearch(nums.splice(pivotIndex),target)
-    }else{
-        return bSearch(nums.splice(0,pivotIndex-1),target)
+
+        return pivotIndex + bSearch(nums.splice(pivotIndex), target)
+    } else {
+        // console.log(bSearch(nums.splice(0, pivotIndex), target))
+        return bSearch(nums.splice(0, pivotIndex), target)
     }
+};
 
-}
 function pivot(s,e,nums){
     
     let m = Math.floor((s + e) / 2)
@@ -47,5 +51,5 @@ function bSearch(nums,target){
 nums = [3,4,5,9,1,2]
 
 // console.log(pivot(0,nums.length,nums))
-// console.log(bSearch(nums,78))
-console.log(search(nums,1))
+// console.log("ejfbvd"+bSearch([3,4,5,9],9))
+console.log(search(nums,5))
