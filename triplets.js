@@ -22,7 +22,10 @@ function triplets_time(array, target) {
       while (left < right){
         let current_sum = sorted_array[i] + sorted_array[left] + sorted_array[right]
         if (current_sum === target){
-            result.push([sorted_array[i],sorted_array[left],sorted_array[right]])
+            let inner = [sorted_array[i], sorted_array[left], sorted_array[right]]
+               
+                result.push(inner)
+            
             left++;
             right--;
         }else if(current_sum < target){
@@ -35,5 +38,6 @@ function triplets_time(array, target) {
     return result
 }
 
-console.log(triplets([12,3,1,2,-6,5,-8,6],0))
-console.log(triplets_time([12,3,1,2,-6,5,-8,6],0))
+// console.log(triplets([12,3,1,2,-6,5,-8,6],0))
+// console.log(triplets_time([12,3,1,2,-6,5,-8,6],0))
+console.log(triplets_time([-1, 0, 1, 2, -1, -4], 0));
